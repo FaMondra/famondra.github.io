@@ -8,30 +8,65 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
     <h1>Mi primer página web</h1>
-    <p> Bienvenido a mi sitio</p>
+    <p class="subtitulo"> Bienvenido a mi sitio</p>
+    <!-- Rounded switch -->
+    <label id="btnTema" class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
     </header>
     
-    <nav>
+    <nav class="menu">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#proyectos">Mis proyectos</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="https://www.youtube.com/watch?v=6Roq-SRAas8"> How the cat distribution system works</a>
     </nav>
 
-    <section id="sobre-mi">
+    <section id="sobre-mi" class="seccion">
         <h2>Sobre mí</h2>
-        <img src="./img/8GbBXpsY.jpg" alt="Mi foto">
-        <p>Soy una estudiante de programación web</p>
+        <div class="sobre-mi-contenido">
+            <img src="./img/8GbBXpsY.jpg" alt="Mi foto">
+            <div class="texto">
+                <p>Soy una estudiante de programación web</p>
+                <p>
+                    También soy correctora de estilo y tengo otro trabajo de tiempo completo.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section id="proyectos">
+    <section id="proyectos" class="seccion">
         <h2>Proyectos</h2>
-        <img src="./img/cafecito.jpg" alt="Mis pensamientos diarios">
-        <p>Estos son mis proyectos</p>
+        <div class="proyecto-card">
+            <img src="./img/cafecito.jpg" alt="Mis pensamientos diarios">
+            <p>Estos son mis proyectos</p>
+        </div>
+
+        <div class="proyecto-card">
+            <img src="./img/cafecito.jpg" alt="Mis pensamientos diarios">
+            <p>Estos son mis proyectos</p>
+        </div>
+
+        <div class="proyecto-card">
+            <img src="./img/cafecito.jpg" alt="Mis pensamientos diarios">
+            <p>Estos son mis proyectos</p>
+        </div>
     </section>
 
-    <footer>
+    <section id="habilidades" class="seccion">
+        <h2>Habilidades</h2>
+        <div class="habilidades-grid">
+            <div class="habilidad">HTML</div>
+            <div class="habilidad">CSS</div>
+            <div class="habilidad">JavaScript</div>
+            <div class="habilidad">Python</div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <p>Llegaste muy abajo</p>
         <img src="./img/samraicat.jpg">
     </footer>
