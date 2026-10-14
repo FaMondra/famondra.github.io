@@ -1,4 +1,263 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: antiquewhite;
+    color: rgb(22, 12, 77);
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135 deg, rgb(135, 206, 250), rgb(135, 206, 250));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color:honeydew;
+}
+
+.header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: rgb(75, 65, 132);
+    flex-wrap: wrap;
+}
+
+nav a{
+    text-decoration: none;
+    color:blueviolet;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: rgb(39, 137, 137);
+}
+
+.section{
+    padding: 40px 20px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(75, 65, 132);
+}
+
+.sobre-mi-contenido {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.sobre-mi-contenido img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+    max-width: 50%;
+    text-align: justify;
+}
+
+.proyecto-card {
+    text-align: center;
+    background-color: rgb(75, 65, 132);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin: 0;
+}
+
+.habilidad{
+    background-color: rgb(75, 65, 132);
+    color: ghostwhite;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.habilidad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(75, 65, 132);
+    color:ghostwhite;
+    margin-top: 60px;
+}
+
+img{
+    width: 20%;
+    border-radius: 10%;
+}
+
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #a8a5a5;
+}
+
+body.dark-mode .header {
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    color: #630f0f;
+}
+
+body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .section h2 {
+    color: #29173f;
+}
+
+body.dark-mode .proyecto-card {
+    background-color: #1e1e1e;
+    color: #721212;
+}
+
+body.dark-mode .habilidad {
+    background-color: #1e1e1e;
+    color: #bb86fc;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #1f0606;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 10px;
+    }
+    nav{
+        padding: 0px;
+    }
+    nav a{
+        display: block;
+        margin: 10px;
+    }
+    .section {
+        text-align: center;
+        padding: 0px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    img {
+        width: 80%;
+    }
+}body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: antiquewhite;
     margin: 0;
